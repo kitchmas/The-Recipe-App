@@ -76,7 +76,6 @@ var saveModal = function() {
         });
     };
 
-
     return {
         saveRecipe: saveRecipe,
         addIngredient: addIngredient,
@@ -86,8 +85,5 @@ var saveModal = function() {
         showRecipe:showRecipe,
         updateRecipe:updateRecipe
     }
-
-
-
 
 }();

@@ -1,6 +1,5 @@
 var recipeHandler = function() {
 
-
     function getRecipes(recipeFunction) {
         $.ajax({
             type: 'GET',
@@ -11,9 +10,7 @@ var recipeHandler = function() {
         });
     };
 
-
     function addRecipe(recipe) {
-
         $.ajax({
             type: 'POST',
             url: '/recipe/recipeAPI',
@@ -22,12 +19,9 @@ var recipeHandler = function() {
                 return recipe;
             }
         });
-
     };
 
     function getRecipeById(url ,showRecipe) {
-
-    debugger;
         $.ajax({
             type: 'GET',
             url: url,
@@ -38,7 +32,6 @@ var recipeHandler = function() {
     };
 
     function updateRecipe(url, recipe){
-      debugger;
       $.ajax({
         type:'PUT',
         url:url,
@@ -46,7 +39,7 @@ var recipeHandler = function() {
         success:function(recipe){
               console.log('done');
         }
-      })
+      });
     }
 
     return {

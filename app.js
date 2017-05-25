@@ -25,6 +25,7 @@ app.set('view engine', 'ejs');
 
 //static files
 app.use(express.static('public'));
+app.use(express.static('views'));
 
 //use body-parser must come before routes
 app.use(bodyParser.urlencoded());

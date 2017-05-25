@@ -5,8 +5,6 @@ const IngredientsSchema = new Schema({
   ingredient:String
 });
 
-
-
 const RecipeShcema = new Schema({
   name:String,
   method:String,

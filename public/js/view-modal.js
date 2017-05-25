@@ -8,7 +8,6 @@ var viewModal = function() {
     };
 
     function closeViewModal() {
-
         $('#view-recipe-modal').css("display", "none");
     };
 
@@ -32,15 +31,10 @@ var viewModal = function() {
         $(".rec-btn-save").toggleClass("rec-btn-save rec-btn-update").html('Update');
     };
 
-
-
     return {
         showRecipe: showRecipe,
         setUpdateModal: setUpdateModal,
         closeViewModal:closeViewModal
     }
-
-
-
 
 }();

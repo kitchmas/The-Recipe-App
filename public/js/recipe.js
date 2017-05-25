@@ -52,16 +52,6 @@
              recipeHandler.getRecipeById(url, saveModal.showRecipe);
          });
 
-
      });
-
-
-
-
-
-     // $('.rec-save').on('click', saveModal.addRecipe);
-
-
-
 
  }(window.jQuery, window, document));

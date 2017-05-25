@@ -4,6 +4,4 @@ var express = require('express')
 router.use('/home',require('./homeController'))
 router.use('/recipe',require('./recipeController'))
 
-
-
 module.exports = router

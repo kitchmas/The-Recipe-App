@@ -1,9 +1,6 @@
 var express = require('express'),
     router = express.Router();
 
-
-
-
 const Recipe = require('../models/recipe');
 
 //Serve the recipe page
@@ -46,7 +43,6 @@ router.use('/recipeAPI/:recipeId', function(req, res, next) {
     });
 });
 
-
 router.route('/recipeAPI/:recipeId')
     .get(function(req, res) {
       debugger;
@@ -67,39 +63,4 @@ router.route('/recipeAPI/:recipeId')
         });
     });
 
-
-
-
-
-
-
-
-
 module.exports = router;
-
-
-// module.exports = function(app) {
-//     const Recipe = require('../models/recipe');
-//
-// //Serve the recipe page
-//     app.get('/recipe', function(req, res) {
-//         res.render('recipe');
-//     });
-//
-//
-//
-//     //add a recipe to the db
-//     app.post('/recipe', function(req, res, next) {
-//         //using body parser to access the body
-//         var recipe = new Recipe(req.body);
-//         recipe.save();
-//     });
-//
-//
-//
-//     app.delete('/recipe', function(req, res) {
-//
-//     });
-//
-//
-// }
