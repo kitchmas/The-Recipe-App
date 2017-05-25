@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #ecf0f1;
+    margin: 0;
+}
+
+.nav-wrapper {
+    background: #ecf0f1;
+    padding-top: 20px;
+    width: 100%;
+    position: fixed;
+}
+
+nav {
+    background-color: #c0392b;
+    overflow: hidden;
+}
+
+nav h3 {
+    font-weight: 400;
+    padding: 12px;
+    color: #ffffff;
+    margin: 0;
+    float: left;
+}
+
+.nav-btn-menu {
+    display: block;
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 5px 12px 5px 12px;
+}
+
+.nav-btn-menu li{
+  display: inline-block;
+}
+
+.rec-button {
+    font-size: 18px;
+    border: none;
+    padding: 8px;
+    width: auto;
+    background-color: #c0392b;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.rec-button:hover {
+    background: #8e1b0f;
+}
+
+
+
+.rec-btn-save {
+    float: right;
+}
+
+.rec-btn-update {
+    float: right;
+}
+
+.rec-edit {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+ul.recipe-form {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.recipe-form h3 {
+    color: #34495e;
+    margin: 4px 0;
+}
+
+ul.recipe-form>li {
+    /*border:1px solid red;*/
+    display: block;
+    padding: 8px 0;
+}
+
+ul.recipe-form>li label, ul.recipe-form>li textarea, ul.recipe-form>li input {
+    display: block;
+    width: 100%;
+}
+
+ul.recipe-form>li label {
+    color: #95a5a6;
+    font-weight: bold;
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+ul.recipe-form>li input[name=name] {
+    border: none;
+    border-color: transparent;
+    outline: none;
+    border-bottom: 1px solid #A6D785;
+    font-size: 32px;
+    color: #A6D785;
+}
+
+ul.recipe-form>li input[name=name]::-webkit-input-placeholder {
+    color: #A6D785;
+    opacity: 0.6;
+}
+
+ul.recipe-form>li textarea {
+    background: #f3f3f3;
+    padding: 5px 8px;
+    height: 180px;
+    border: none;
+    border-color: transparent;
+    outline: none;
+    font-family: arial;
+}
+
+ul.recipe-form>li ul#ingredients-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 800px;
+    overflow-x: hidden;
+}
+
+ul.recipe-form>li ul#ingredients-list>li {
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    font-size: 12px;
+    background: #f3f3f3;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+ul.recipe-form>li ul#ingredients-list>li:hover {
+    text-decoration: line-through;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+ul.recipe-form>li input[name=ingredient] {
+    background: #f3f3f3;
+    width: 100%;
+    float: left;
+    padding: 10px 8px;
+    height: 38px;
+    border: none;
+    border-color: transparent;
+    outline: none;
+}
+
+ul.recipe-form>li .rec-btn-add-ingredient {
+    float: right;
+}
+
+.recipe-view {
+    padding: 40px;
+}
+
+.recipe-view .recipe-view-heading-area {
+    text-align: right;
+}
+
+.recipe-view .recipe-view-heading {
+    color: #A6D785;
+    display: inline-block;
+    width: 70%;
+    margin: 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.recipe-view .recipe-view-area {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.recipe-view .recipe-view-area>div:first-child {
+    float: left;
+    width: 30%;
+}
+
+.recipe-view .recipe-view-area>div:last-child {
+    float: left;
+    width: 70%;
+}
+
+.recipe-view .recipe-method-heading {
+    color: #A6D785;
+    text-align: left;
+    margin: 0;
+}
+
+.recipe-view .recipe-view-ingredients {
+    padding-left: 0;
+}
+
+.recipe-view .recipe-ingredients-heading {
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-viewer {
+    text-align: center;
+}
+
+.recipe-item {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 236px;
+    max-height: 300px;
+    margin: 10px;
+    background: #ffffff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item .recipe-item-heading {
+    color: #A6D785;
+    width: auto;
+    display: inline-block;
+    width: 80%;
+    margin: 0px 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+}
+
+.recipe-item .recipe-method-heading {
+    color: #A6D785;
+    text-align: left;
+    margin: 0;
+    margin: 8px 0 0 28px;
+}
+
+.recipe-item .recipe-item-body {
+    font-size: 10px;
+    margin: 4px 28px 14px 28px;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 479px) {
+    ul.recipe-form>li input[name=name] {
+        border: none;
+        border-color: transparent;
+        outline: none;
+        border-bottom: 1px solid #A6D785;
+        font-size: 18px;
+        color: #A6D785;
+    }
+}
