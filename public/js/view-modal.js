@@ -1,3 +1,4 @@
+
 var viewModal = function() {
 
     function clearViewModal() {
@@ -17,7 +18,6 @@ var viewModal = function() {
 
     function showRecipe(recipe) {
         openViewModal();
-        debugger;
         $('.recipe-view-heading').text(recipe.name);
         $('.recipe-view-method').text(recipe.method);
         $('.recipe-view').attr("recipe-id", recipe._id);
@@ -38,3 +38,4 @@ var viewModal = function() {
     }
 
 }();
+
