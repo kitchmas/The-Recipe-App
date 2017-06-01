@@ -1,4 +1,5 @@
 var recipeHandler = function() {
+   var $ = require('jquery');
 
     function getRecipes(recipeFunction) {
         $.ajax({
@@ -50,4 +51,6 @@ var recipeHandler = function() {
     };
 
 
-}();
+}
+
+module.exports = recipeHandler();

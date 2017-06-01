@@ -1,4 +1,5 @@
 var saveModal = function() {
+  var $ = require('jquery');
 
     function clearSaveModal() {
         $('#save-recipe-modal #recipe-name').val("");
@@ -86,4 +87,6 @@ var saveModal = function() {
         updateRecipe:updateRecipe
     }
 
-}();
+}
+
+module.exports = saveModal();

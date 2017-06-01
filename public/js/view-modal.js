@@ -1,5 +1,6 @@
 
 var viewModal = function() {
+var $ = require('jquery');
 
     function clearViewModal() {
         $('#view-recipe-modal .recipe-view-heading').text("");
@@ -37,5 +38,7 @@ var viewModal = function() {
         closeViewModal:closeViewModal
     }
 
-}();
+}
+
+module.exports  = viewModal();
 

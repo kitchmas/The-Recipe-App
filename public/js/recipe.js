@@ -1,4 +1,9 @@
- (function($, window, document) {
+
+
+   var recipeHandler = require('./recipe-handler.js');
+   var saveModal = require('./save-modal.js');
+   var viewModal = require('./view-modal.js');
+   var $ = require('jquery');
 
      function loadRecipes(recipes) {
 
@@ -54,4 +59,4 @@
 
      });
 
- }(window.jQuery, window, document));
+

@@ -10,7 +10,6 @@ body {
 
 .nav-wrapper {
     background: #ecf0f1;
-    padding-top: 20px;
     width: 100%;
     position: fixed;
 }
@@ -218,12 +217,12 @@ ul.recipe-form>li .rec-btn-add-ingredient {
 
 .recipe-viewer {
     text-align: center;
+    padding-top:48px;
 }
 
 .recipe-item {
     display: inline-block;
     vertical-align: top;
-    overflow: hidden;
     width: 236px;
     max-height: 300px;
     margin: 10px;
@@ -239,6 +238,7 @@ ul.recipe-form>li .rec-btn-add-ingredient {
     margin: 0px 8px;
     padding: 8px 0;
     border-bottom: 1px solid black;
+    height: 180px;
 }
 
 .recipe-item .recipe-method-heading {
@@ -253,6 +253,8 @@ ul.recipe-form>li .rec-btn-add-ingredient {
     margin: 4px 28px 14px 28px;
     text-align: left;
     vertical-align: top;
+    overflow: hidden;
+    height: 80px;
 }
 
 @media only screen and (max-width: 479px) {
