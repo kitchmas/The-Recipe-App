@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>The Recipe Page</title>
-	<link href="/css/modal.css" rel="stylesheet" type="text/css">
-	<link href="/css/recipe.css" rel="stylesheet" type="text/css">
-	<script src="bundle.js">
-	</script>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>The Recipe Page</title>
+    <link href="/css/modal.css" rel="stylesheet" type="text/css">
+    <link href="/css/recipe.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/272c3f495f.js"></script>
+    <script src="bundle.js">
+    </script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
+
 <body>
-	<div class="nav-wrapper">
-		<nav>
-			<h3>The Recipe app</h3>
-			<ul class="nav-btn-menu">
-				<li>
-					<a class="rec-button rec-btn-add">Add recipe</a>
-				</li>
-			</ul>
-		</nav>
-	</div><!-- Add Recipe -->
-	<div class="modal" id="save-recipe-modal">
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<form>
-				<ul class="recipe-form">
-					<li><!-- <label for="recipe-name">Name</label> -->
-					<input id="recipe-name" name="name" onblur="this.placeholder = 'Recipe Name'" onfocus="this.placeholder = ''" placeholder="Recipe Name" required="" type="text"></li>
-					<li><label for="recipe-method">Steps</label> 
-					<textarea id="recipe-steps" name="recipe-method" required=""></textarea></li>
-					<li>
-						<ul id="ingredients-list"></ul>
-					</li>
-					<li>
-						<a class="rec-button rec-btn-add-ingredient">Add</a>
-						<div class="overflow-hidden">
-							<input id="recipe-ingredient" name="ingredient" required="">
-						</div>
-					</li>
-					<li class="overflow-hidden">
-						<a class="rec-button rec-btn-save" type="submit">Save</a>
-					</li>
-				</ul>
-			</form>
-		</div>
-	</div>
-	<div class="modal" id="view-recipe-modal">
-		<div class="modal-content recipe-view">
-			<a class="rec-button rec-edit" type="edit">Edit</a> <span class="close">&times;</span>
-			<div class="recipe-view-heading-area">
-				<h1 class="recipe-view-heading"></h1>
-			</div>
-			<div class="recipe-view-area">
-				<div>
-					<h4 class="recipe-ingredients-heading"><i>Ingredients</i></h4>
-					<ul class="recipe-view-ingredients"></ul>
-				</div>
-				<div>
-					<h4 class="recipe-method-heading">Method</h4>
-					<p class="recipe-view-method"></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="recipe-viewer"></div>
+    <nav>
+        <ul class="main-nav">
+            <li>
+                <h3>The Recipe app</h3>
+            </li>
+            <li>
+                <input placeholder="Search" class="search-bar" type="text">
+            </li>
+            <li class="hamburger-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+            </li>
+        </ul>
+        <ul class="collapse-nav">
+            <li>
+                <a class="rec-button rec-btn-add">Add recipe</a>
+            </li>
+            <li>
+                <a class="rec-button rec-btn-add">Add recipe</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="modal" id="save-recipe-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <ul class="recipe-form">
+                    <li>
+                        <!-- <label for="recipe-name">Name</label> -->
+                        <input id="recipe-name" name="name" onblur="this.placeholder = 'Recipe Name'" onfocus="this.placeholder = ''" placeholder="Recipe Name" required="" type="text"></li>
+                    <li><label for="recipe-method">Steps</label>
+                        <textarea id="recipe-steps" name="recipe-method" required=""></textarea></li>
+                    <li>
+                        <ul id="ingredients-list"></ul>
+                    </li>
+                    <li>
+                        <a class="rec-button rec-btn-add-ingredient">Add</a>
+                        <div class="overflow-hidden">
+                            <input id="recipe-ingredient" name="ingredient" required="">
+                        </div>
+                    </li>
+                    <li class="overflow-hidden">
+                        <a class="rec-button rec-btn-save" type="submit">Save</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="view-recipe-modal">
+        <div class="modal-content recipe-view">
+            <a class="rec-button rec-edit" type="edit">Edit</a> <span class="close">&times;</span>
+            <div class="recipe-view-heading-area">
+                <h1 class="recipe-view-heading"></h1>
+            </div>
+            <div class="recipe-view-area">
+                <div>
+                    <h4 class="recipe-ingredients-heading"><i>Ingredients</i></h4>
+                    <ul class="recipe-view-ingredients"></ul>
+                </div>
+                <div>
+                    <h4 class="recipe-method-heading">Method</h4>
+                    <p class="recipe-view-method"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipe-viewer"></div>
 </body>
+
 </html>

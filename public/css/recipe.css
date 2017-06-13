@@ -1,42 +1,81 @@
 * {
     box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 body {
-    font-family: Verdana, Geneva, sans-serif;
     background-color: #ecf0f1;
     margin: 0;
 }
 
-.nav-wrapper {
-    background: #ecf0f1;
-    width: 100%;
-    position: fixed;
-}
-
 nav {
     background-color: #c0392b;
-    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    height: 40px;
 }
 
-nav h3 {
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex: 2 0 0;
+}
+
+.main-nav li:first-child {
+    flex: 0 0 180px;
+}
+
+.main-nav li:nth-child(2) {
+    flex: 1 0 0;
+}
+
+.main-nav li:last-child {
+    flex: 0 0 45px;
+}
+
+.main-nav h3 {
     font-weight: 400;
-    padding: 12px;
+    padding: 0 12px;
     color: #ffffff;
     margin: 0;
-    float: left;
 }
 
-.nav-btn-menu {
-    display: block;
-    float: right;
+.main-nav .search-bar {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    height: 30px;
+    padding-left: 8px;
+}
+
+.main-nav .search-bar::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.6;
+}
+
+.main-nav .hamburger-btn {
+    font-size: 32px;
+    color: white;
+    padding-left: 8px;
+}
+
+.collapse-nav {
+    background-color: #c0392b;
     list-style: none;
-    margin: 0;
-    padding: 5px 12px 5px 12px;
 }
 
-.nav-btn-menu li{
-  display: inline-block;
+.collapse-nav li {
+    padding: 0 12px;
+}
+
+.collapse-nav li:not(:first-child) a {
+    border-top: 1px solid white;
 }
 
 .rec-button {
@@ -55,8 +94,6 @@ nav h3 {
 .rec-button:hover {
     background: #8e1b0f;
 }
-
-
 
 .rec-btn-save {
     float: right;
@@ -93,7 +130,9 @@ ul.recipe-form>li {
     padding: 8px 0;
 }
 
-ul.recipe-form>li label, ul.recipe-form>li textarea, ul.recipe-form>li input {
+ul.recipe-form>li label,
+ul.recipe-form>li textarea,
+ul.recipe-form>li input {
     display: block;
     width: 100%;
 }
@@ -217,14 +256,14 @@ ul.recipe-form>li .rec-btn-add-ingredient {
 
 .recipe-viewer {
     text-align: center;
-    padding-top:48px;
+    padding-top: 48px;
 }
 
 .recipe-item {
     display: inline-block;
     vertical-align: top;
     width: 236px;
-    max-height: 300px;
+    height: 300px;
     margin: 10px;
     background: #ffffff;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -235,26 +274,48 @@ ul.recipe-form>li .rec-btn-add-ingredient {
     width: auto;
     display: inline-block;
     width: 80%;
+    height: 90px;
     margin: 0px 8px;
-    padding: 8px 0;
+    padding: 10px 0;
     border-bottom: 1px solid black;
-    height: 180px;
 }
 
 .recipe-item .recipe-method-heading {
     color: #A6D785;
     text-align: left;
     margin: 0;
-    margin: 8px 0 0 28px;
 }
 
 .recipe-item .recipe-item-body {
+    height: 172px;
+    margin: 14px 28px 14px 28px;
+}
+
+.recipe-item .recipe-method-body {
     font-size: 10px;
-    margin: 4px 28px 14px 28px;
     text-align: left;
     vertical-align: top;
+    height: 150px;
     overflow: hidden;
-    height: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+    }
+    .hamburger-btn {
+        display: none;
+    }
+    .collapse-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 0 0;
+        border: none;
+    }
+    .collapse-nav li:not(:first-child) a {
+        border-top: none;
+    }
 }
 
 @media only screen and (max-width: 479px) {
